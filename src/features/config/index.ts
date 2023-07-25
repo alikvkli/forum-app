@@ -2,11 +2,11 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit"
 import { InitialStateProps } from "./types"
 
 const initialState: InitialStateProps = {
-    appName: "React App"
+    appName: "Soru & Cevap"
 }
 
-const appSlice = createSlice({
-    name: "app",
+const configSlice = createSlice({
+    name: "config",
     initialState,
     reducers: {
         changeAppName: (state, action: PayloadAction<InitialStateProps['appName']>) => {
@@ -17,6 +17,6 @@ const appSlice = createSlice({
 
 export const {
     changeAppName
-} = appSlice.actions;
+} = configSlice.actions;
 
-export default appSlice.reducer;
+export default configSlice.reducer;
