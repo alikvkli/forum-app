@@ -25,9 +25,6 @@ module.exports = {
     ringColor:{
       primary:'#ff4500',
     },
-    height:{
-      container:'calc(100vh-72px)'
-    },
     extend: {},
   },
   plugins: [],
