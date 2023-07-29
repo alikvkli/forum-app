@@ -4,14 +4,18 @@ import {Menu, Transition} from "@headlessui/react";
 import {PiUserLight} from "react-icons/pi";
 import React, {Fragment} from "react";
 import {Link} from "react-router-dom";
-import {AiOutlineQuestionCircle} from "react-icons/ai";
+import {AiOutlineClose, AiOutlineMenu, AiOutlineQuestionCircle} from "react-icons/ai";
 import {TfiAnnouncement} from "react-icons/tfi";
 import {HiOutlineLogout} from "react-icons/hi";
-import {useAppSelector} from "../../hooks";
+import {useAppDispatch, useAppSelector} from "../../hooks";
+import {changeMenu} from "../../features/config";
+import {IoCloseSharp} from "react-icons/io5";
 
 
 export default function Header(){
-    const {appName} = useAppSelector(state => state.config);
+    const dispatch = useAppDispatch();
+    const {appName,menu} = useAppSelector(state => state.config);
+
     return (
         <header className="fixed z-10  top-0 h-16 bg-[#fff] border-b-default border-default w-full p-4 flex justify-between items-center">
             <div className="flex items-center justify-center gap-2">
@@ -24,7 +28,13 @@ export default function Header(){
                 </label>
                 <input className="w-full  py-2 pl-8  rounded-lg bg-default font-light text-secondary text-sm border-default  focus:outline-primary" type="text" placeholder="Arama..."/>
             </div>
-            <div className="flex gap-6 justify-center items-center">
+            <div className="max-sm:flex hidden gap-6 justify-center items-center">
+                <button onClick={() => dispatch(changeMenu(!menu))}>
+                    {!menu && <AiOutlineMenu size={29}/>}
+                    {menu && <IoCloseSharp size={29}/>}
+                </button>
+            </div>
+            <div className="max-sm:hidden flex gap-6 justify-center items-center">
                 <button className="bg-primary text-[#fff] text-md font-semibold rounded-full py-1.5 px-10 hover:bg-light max-sm:hidden">Giriş</button>
                 <Menu as="div" className="relative">
                     <Menu.Button>

@@ -9,7 +9,12 @@ const PublicLayout:FC<{children:React.ReactNode}> = ({children}) => {
             <Header/>
             <LeftSidebar/>
             <BottomSideBar/>
-            {children}
+            <div className="bg-darker mt-16 min-h-[calc(100vh-64px)] max-sm:mb-14  pl-[270px] max-sm:pl-0">
+                <div className="flex flex-col gap-4 p-4">
+                    {children}
+                </div>
+            </div>
+
         </>
     )
 }

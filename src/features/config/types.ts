@@ -1,3 +1,4 @@
 export interface InitialStateProps{
-    appName: string
+    appName: string,
+    menu:boolean,
 }
