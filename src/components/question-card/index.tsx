@@ -7,7 +7,7 @@ import classNames from "classnames";
 
 const QuestionCard = forwardRef<HTMLDivElement, {rounded?:boolean}>((props, ref) => {
     return (
-        <div ref={ref} className={classNames("bg-[#fff] w-full min-h-full shadow-md flex", {'rounded-md': props.rounded})}>
+        <div ref={ref} className={classNames("bg-[#fff] border-default w-full min-h-full shadow-md flex", {'rounded-md': props.rounded})}>
             <div className="max-h-full rounded-md flex flex-col items-center gap-4 w-14 bg-default p-4">
                 <button className="rounded-full hover:bg-light hover:text-[#fff] p-1 ">
                     <AiOutlineArrowUp size={26}/>
@@ -31,7 +31,7 @@ const QuestionCard = forwardRef<HTMLDivElement, {rounded?:boolean}>((props, ref)
                         </div>
                         <div className="flex mt-2 items-center gap-2">
                             <BiTimeFive className="text-secondary"/>
-                            <p className="text-secondary flex-none text-sm font-light">2 saat önce</p>
+                            <p className="text-secondary flex-none text-xs font-light">2 saat önce</p>
                         </div>
 
                     </div>

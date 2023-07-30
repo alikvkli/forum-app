@@ -40,7 +40,7 @@ const ProfileLayout: FC<{ children: React.ReactNode }> = ({children}) => {
                         </div>
                     </div>
                     <div
-                        className="sticky rounded-sm z-20  top-16 bg-[#fff] flex items-center gap-2 text-sm border-b-default p-3">
+                        className="sticky rounded-sm z-20 mb-2 shadow-sm  top-16 bg-[#fff] flex items-center gap-2 text-sm border-b-default p-3">
                         <NavLink
                             className={({isActive}) => classNames("text-xs px-2 py-0.5", {"bg-primary rounded-full text-[#fff]": isActive})}
                             to="/profil/alikvkli/">Sorular</NavLink>
