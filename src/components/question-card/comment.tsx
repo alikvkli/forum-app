@@ -48,7 +48,7 @@ const Comment = () => {
                                   className="w-full rounded-md resize-none bg-[#ebedef] font-light outline-primary outline-offset-1 outline-1 p-2 text-xs"
                                   rows={5}/>
 
-                        <button className="bg-primary px-6 hover:bg-light py-1 text-[#fff] rounded-md">Yanıtla</button>
+                        <button className="bg-primary text-xs px-6 hover:bg-light py-1 text-[#fff] rounded-md">Yanıtla</button>
                     </motion.div>
                 )}
             </AnimatePresence>
