@@ -8,13 +8,14 @@ import React, {Fragment} from "react";
 import {useAppSelector} from "../../hooks";
 import classNames from "classnames";
 
-export default function LeftSidebar(){
+
+export default function LeftSidebar() {
     const {menu} = useAppSelector(state => state.config)
     return (
-
-        <aside className={classNames("fixed transition-all left-0 h-[calc(100vh-64px)] bottom-0 z-10 w-[270px] p-4 overflow-hidden bg-[#fff] flex flex-col", {
-            'max-sm:hidden': !menu,
-        })}>
+        <aside
+            className={classNames("fixed transition-all left-0 h-[calc(100vh-64px)] border-r-default bottom-0 z-10 w-[270px] p-4 overflow-hidden bg-[#fff] flex flex-col", {
+                'max-sm:hidden': !menu,
+            })}>
             <div className="flex flex-col flex-1 gap-4 overflow-y-auto">
                 <p className="uppercase text-[10px] text-secondary">içerik</p>
                 <Link className="flex items-center gap-4 p-2 hover:bg-darker hover:rounded-md" to="/">
@@ -29,12 +30,12 @@ export default function LeftSidebar(){
                 <p className="uppercase text-[10px] text-secondary">konular</p>
 
                 <Menu>
-                    <Menu.Button  className="flex items-center gap-4 p-2 hover:bg-darker hover:rounded-md relative">
-                        {({ open }) =>  open ?  (<>
+                    <Menu.Button className="flex items-center gap-4 p-2 hover:bg-darker hover:rounded-md relative">
+                        {({open}) => open ? (<>
                             <GrGamepad size={22}/>
                             <p className="font-light text-sm">Oyun</p>
                             <BsChevronUp className="absolute right-2" size={16}/>
-                        </>): (
+                        </>) : (
                             <>
                                 <GrGamepad size={22}/>
                                 <p className="font-light text-sm">Oyun</p>

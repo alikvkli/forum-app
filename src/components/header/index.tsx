@@ -4,7 +4,7 @@ import {Menu, Transition} from "@headlessui/react";
 import {PiUserLight} from "react-icons/pi";
 import React, {Fragment} from "react";
 import {Link} from "react-router-dom";
-import {AiOutlineClose, AiOutlineMenu, AiOutlineQuestionCircle} from "react-icons/ai";
+import { AiOutlineMenu, AiOutlineQuestionCircle} from "react-icons/ai";
 import {TfiAnnouncement} from "react-icons/tfi";
 import {HiOutlineLogout} from "react-icons/hi";
 import {useAppDispatch, useAppSelector} from "../../hooks";
@@ -18,10 +18,10 @@ export default function Header(){
 
     return (
         <header className="fixed z-10  top-0 h-16 bg-[#fff] border-b-default border-default w-full p-4 flex justify-between items-center">
-            <div className="flex items-center justify-center gap-2">
+            <Link to="/" onClick={() => dispatch(changeMenu(false))} className="flex items-center justify-center gap-2">
                 <FaClipboardQuestion className="text-primary" size={32}/>
                 <p className="font-semibold text-lg flex-none text-primary max-sm:text-sm">{appName}</p>
-            </div>
+            </Link>
             <div className="w-1/2 relative max-sm:hidden">
                 <label className="absolute left-2 top-1/2 -translate-y-1/2">
                     <BiSearchAlt className="text-secondary " size={20}/>
