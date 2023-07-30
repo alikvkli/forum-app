@@ -7,7 +7,7 @@ export default function HomePage() {
     return (
         <PublicLayout>
             {[...Array(100)].map((_, i) => (
-                <QuestionCard key={i}/>
+                <QuestionCard rounded={true} key={i}/>
             ))}
         </PublicLayout>
     )

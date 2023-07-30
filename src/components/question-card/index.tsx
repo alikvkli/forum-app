@@ -3,10 +3,11 @@ import {BsFillBookmarkFill} from "react-icons/bs";
 import {Link} from "react-router-dom";
 import {BiTimeFive} from "react-icons/bi";
 import React, {forwardRef} from "react";
+import classNames from "classnames";
 
-const QuestionCard = forwardRef<HTMLDivElement, any>((props, ref) => {
+const QuestionCard = forwardRef<HTMLDivElement, {rounded?:boolean}>((props, ref) => {
     return (
-        <div ref={ref} className="bg-[#fff] w-full min-h-full shadow-md flex  rounded-md">
+        <div ref={ref} className={classNames("bg-[#fff] w-full min-h-full shadow-md flex", {'rounded-md': props.rounded})}>
             <div className="max-h-full rounded-md flex flex-col items-center gap-4 w-14 bg-default p-4">
                 <button className="rounded-full hover:bg-light hover:text-[#fff] p-1 ">
                     <AiOutlineArrowUp size={26}/>

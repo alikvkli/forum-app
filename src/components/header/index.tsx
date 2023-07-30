@@ -35,7 +35,7 @@ export default function Header(){
                 </button>
             </div>
             <div className="max-sm:hidden flex gap-6 justify-center items-center">
-                <button className="bg-primary text-[#fff] text-md font-semibold rounded-full py-1.5 px-10 hover:bg-light max-sm:hidden">Giriş</button>
+                <button className="bg-primary text-[#fff] text-xs font-semibold rounded-full py-2 px-8 hover:bg-light max-sm:hidden">Giriş</button>
                 <Menu as="div" className="relative">
                     <Menu.Button>
                         <PiUserLight size={32}/>
